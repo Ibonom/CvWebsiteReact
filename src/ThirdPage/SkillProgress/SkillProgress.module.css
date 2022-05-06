@@ -25,6 +25,9 @@
 
         margin-bottom:25px;
     }
+    .icons img{
+        height: 60px;
+    }
 }
 
 @media screen and (max-width:767px){
@@ -33,5 +36,8 @@
         width:100%;
         padding: 20px;
         margin: 0 auto 25px auto;
+    }
+    .icons img{
+        height: 50px;
     }
 }

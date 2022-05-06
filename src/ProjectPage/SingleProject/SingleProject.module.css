@@ -16,6 +16,7 @@ section img {
 
 section p {
     text-align: center;
+    
 }
 section nav div{
     text-align: end;
@@ -42,20 +43,24 @@ article p {
     font-family: PIXEL;
     color: white;
     opacity: 60%;
-    text-align: justify;
+    text-align: center;
     font-size: 1.2rem;
     padding: 15px;
+    overflow-wrap: break-word;
+    
 }
 
 @media screen and (max-width:767px){
     section img{
-        height: 100%;
-        width: 35%;
+       width: 35%;
     }
     article p {
-        margin-right: 15px;
+        max-height: max-content;
         font-size:0.9rem;
+        width: 70%;
+        padding: 10px;
     }
+
 }
 
 

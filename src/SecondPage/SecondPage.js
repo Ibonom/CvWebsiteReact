@@ -8,7 +8,7 @@ const SecondPage = (props) => {
 
     const[name,setName] = useState('skip')
 
-    setTimeout(()=>{setName('Continue')},20000)
+    setTimeout(()=>{setName('Continue')},15000)
 
   return (
     <React.Fragment>
