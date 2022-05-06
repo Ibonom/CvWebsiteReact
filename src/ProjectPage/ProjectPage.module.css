@@ -1,0 +1,45 @@
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap:10px;
+    margin: 15px;
+    list-style-type: none;
+}
+
+
+.navButtons {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.navButtons button {
+    width: 25vw;
+    cursor: pointer;
+    background-color: #357065;
+    color:#FFC909;
+    border-width:0 1px 3px 1px ;
+    border-style: solid ;
+    border-color: #5FEBBA;
+    border-radius: 0 0 5px 5px;
+    padding: 10px;
+}
+
+
+@media screen and (min-width:768px) and (max-width: 1023px) {
+    .navButtons {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width:767px){
+    .gallery{
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+    .navButtons {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .navButtons button {
+        width: 45vw;
+    }
+}

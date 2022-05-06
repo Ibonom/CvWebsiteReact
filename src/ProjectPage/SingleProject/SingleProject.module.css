@@ -1,0 +1,63 @@
+
+nav p {
+    font-family: PIXEL;
+    font-size: 3rem;
+    color: #5FEBBA;
+    padding: 10px;
+}
+
+section img {
+    padding: 10px;
+    height: 25%;
+    width: 25%;
+    object-fit: contain;
+    opacity: 60%;
+}
+
+section p {
+    text-align: center;
+}
+section nav div{
+    text-align: end;
+}
+section nav div a {
+    text-decoration: none;
+    background-color:#FFC909;
+    border: #5FEBBA 2px solid;
+    color: #272626;
+    padding: 5px;
+    margin: 5px;
+    font-size: 1.3em;
+    border-radius: 10px;
+    opacity: 70%;
+}
+
+
+article {
+    display: flex;
+    align-items: center;
+}
+
+article p {
+    font-family: PIXEL;
+    color: white;
+    opacity: 60%;
+    text-align: justify;
+    font-size: 1.2rem;
+    padding: 15px;
+}
+
+@media screen and (max-width:767px){
+    section img{
+        height: 100%;
+        width: 35%;
+    }
+    article p {
+        margin-right: 15px;
+        font-size:0.9rem;
+    }
+}
+
+
+
+

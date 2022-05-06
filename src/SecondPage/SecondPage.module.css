@@ -1,0 +1,79 @@
+.position {
+    margin-top: 15%;
+    position: relative;
+}
+
+.position::after {
+    content: '';
+    height: 80%;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(20, 20, 20, 1) 40%, rgba(20, 20, 20, 0) 100%);
+    z-index: 1;
+}
+
+
+.wrapper {
+    display: flex;
+    height: 100%;
+    margin: 0 auto;
+    width: 60%;
+    perspective: 1500px;
+
+}
+
+
+.scroll-text {
+    color: #FFC909;
+    font-weight: bold;
+    line-height: 3em;
+    font-size: 5vw;
+    text-align: justify;
+    position: relative;
+    animation: scroll 45s linear forwards;
+    transform: translateZ(-2500px) rotateX(20deg);
+}
+
+
+.skipButton {
+    border: none;
+    background-color: #FFC909;
+    box-shadow: 0px 0px 2px 2px rgb(0, 0, 0);
+    font-size: 25px;
+    right: 0;
+    padding: 10px;
+    margin: 10px;
+    position: fixed;
+    z-index: 2;
+    width: 120px;
+    cursor: pointer;
+}
+
+.skipButton:active {
+    background-color: #c49901;
+}
+
+
+@keyframes scroll {
+    from {
+        top: 0;
+        transform: translateZ(0) rotateX(21deg)
+    }
+
+    to {
+        top: -7500px;
+        transform: translateZ(-2500px) rotateX(21deg)
+    }
+}
+
+
+@media screen and (max-width:767px) {
+    .position {
+        margin-top: 70%;
+    }
+
+    .scroll-text {
+        animation: scroll 120s linear forwards;
+    }
+}

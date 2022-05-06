@@ -1,0 +1,12 @@
+.backgroundStyle {
+    background: linear-gradient(to bottom,
+            #357065b7,
+            #357065b7 50%,
+            #0d1a17a8 50%,
+            #0d1a17a8);
+
+    background-size: 100% 6px;
+    border: solid 8px silver;
+    border-radius: 10px;
+   
+}
