@@ -1,0 +1,110 @@
+@import "../index.scss";
+@import url("https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap");
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin contentAndBlock {
+  content: "";
+  display: block;
+}
+
+/* CHECKBOX */
+
+input {
+  display: block;
+  margin-bottom: 1.5em;
+}
+
+.l {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 0.75em;
+  box-shadow: 0.125em 0.125em 0 0.125em rgba(0, 0, 0, 0.3) inset;
+  color: $goldTxt;
+  display: inline-flex;
+  align-items: center;
+  margin-top: 3rem;
+  padding: 0.15em;
+  width: 3em;
+  height: 1.5em;
+  transition: background-color 0.1s 0.3s ease-out, box-shadow 0.1s 0.3s ease-out;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-size: 3rem;
+  &:before {
+    @include contentAndBlock();
+    background-color: #d7d7d7;
+    border-radius: 50%;
+    width: 1.2em;
+    height: 1.2em;
+    transition: background-color 0.1s 0.3s ease-out, transform 0.3s ease-out;
+    z-index: 1;
+  }
+  &:after {
+    @include contentAndBlock();
+    background: linear-gradient(transparent 50%, rgba(0, 0, 0, 0.15) 0) 0 50% /
+        50% 100%,
+      repeating-linear-gradient(
+          90deg,
+          #bbb 0,
+          #bbb,
+          #bbb 20%,
+          #999 20%,
+          #999 40%
+        )
+        0 50% / 50% 100%,
+      radial-gradient(circle at 50% 50%, #888 25%, transparent 26%);
+    background-repeat: no-repeat;
+    border: 0.25em solid transparent;
+    border-left: 0.4em solid #d8d8d8;
+    border-right: 0 solid transparent;
+    transition: border-left-color 0.1s 0.3s ease-out, transform 0.3s ease-out;
+    transform: translateX(-22.5%);
+    transform-origin: 25% 50%;
+    width: 1.2em;
+    height: 1em;
+  }
+  /* Checked */
+  &:checked {
+    background-color: rgba(0, 0, 0, 0.45);
+    box-shadow: 0.125em 0.125em 0 0.125em rgba(0, 0, 0, 0.1) inset;
+  }
+  &:checked:before {
+    background-color: currentColor;
+    transform: translateX(125%);
+  }
+  &:checked:after {
+    border-left-color: currentColor;
+    transform: translateX(-2.5%) rotateY(180deg);
+  }
+  &:focus {
+    outline: 0;
+  }
+}
+
+/* Other stuff */
+
+.center--div {
+  @include flexProperty(center, center);
+  height: 100%;
+  flex-direction: column;
+  font-family: "Oleo Script Swash Caps", cursive;
+}
+
+.center--div h1 {
+  font-size: 5rem;
+  font-weight: 100;
+  color: white;
+}
+
+.center--div p {
+  font-size: 3rem;
+  color: white;
+  font-weight: 100;
+}

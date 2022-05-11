@@ -6,7 +6,7 @@ nav p {
     padding: 10px;
 }
 
-section img {
+.previewImg img {
     padding: 10px;
     height: 25%;
     width: 25%;
@@ -51,7 +51,7 @@ article p {
 }
 
 @media screen and (max-width:767px){
-    section img{
+    .previewImg img{
        width: 35%;
     }
     article p {

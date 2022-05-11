@@ -1,9 +1,9 @@
 import React from "react";
-import classes from "./Background.module.css";
+import classes from "./Background.module.scss";
 
 const Background = (props) => {
   return (
-    <div style={props.transparency?{overflow: 'auto'}:{overflow: 'hidden'} } className={classes["colors"]}>
+    <div style={props.transparency ? { overflow: 'auto' } : { overflow: 'hidden' }} className={classes[`${props.isThird === "thirdPage" ? "colors--flex" : "colors"}`]}>
       {props.transparency ? (
         <React.Fragment />
       ) : (

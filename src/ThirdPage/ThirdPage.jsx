@@ -1,8 +1,9 @@
-import React from "react";
-import classes from "./ThirdPage.module.css";
+import React,{useState,useLayoutEffect,useEffect} from "react";
+import classes from "./ThirdPage.module.scss";
 import face from "../Assets/me.jpg";
 import SkillProgress from "./SkillProgress/SkillProgress";
 import Icons from "./Icons";
+import ItemBackground from "../Background/ItemBackground";
 
 const ThirdPage = (props) => {
   const txtBinary =
@@ -11,10 +12,22 @@ const ThirdPage = (props) => {
     const clickHandler = () => {
         props.thirdCheck()
     }
+    const [size, setSize] = useState(0);
+
+
+    useLayoutEffect(() => {
+      function updateSize() {
+        setSize(window.innerWidth);
+      }
+      window.addEventListener('resize', updateSize);
+      updateSize();
+      return () => window.removeEventListener('resize', updateSize);
+     
+    }, [size]);
+
 
   return (
-    <React.Fragment>
-      <div className={classes["backgroundStyle"]}>
+    <ItemBackground>
         <div className={classes["positionFlex"]}>
           <div className={classes["profilePicture"]}>
             <img src={face} alt="me" />
@@ -30,17 +43,16 @@ const ThirdPage = (props) => {
               ))}
             </ul>
           </div>
-          <div className={classes["binary"]}>
+          {size <768?<React.Fragment/>:<div className={classes["binary"]}>
             <p>{txtBinary}</p>
-          </div>
+          </div>}
         </div>
         <div className={classes["nextSection"]}>
           <button onClick={clickHandler} >
             More information about me
           </button>
         </div>
-      </div>
-    </React.Fragment>
+    </ItemBackground>
   );
 };
 

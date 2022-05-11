@@ -44,7 +44,7 @@ function App() {
 
 
   return (
-    <Background transparency={scroll}>
+    <Background transparency={scroll} isThird={site}>
       {site === 'front' && <FrontPage frontCheck={frontHandler} />}
       {site === 'secondPage' && <SecondPage secondCheck={secondHandler} />}
       {site === 'thirdPage' && <ThirdPage thirdCheck={thirdHandler} />}

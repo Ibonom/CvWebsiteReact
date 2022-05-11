@@ -1,5 +1,5 @@
 import React from "react";
-import classes from './SkillProgress.module.css'
+import classes from './SkillProgress.module.scss'
 
 const SkillProgress = (props) => {
 

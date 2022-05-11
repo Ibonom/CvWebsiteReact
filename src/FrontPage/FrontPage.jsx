@@ -1,5 +1,5 @@
 import React from "react";
-import classes from './FrontPage.module.css'
+import classes from './FrontPage.module.scss'
 
 
 

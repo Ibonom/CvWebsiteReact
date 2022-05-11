@@ -1,5 +1,5 @@
 import React from "react";
-import classes from './FormPage.module.css'
+import classes from './FormPage.module.scss'
 
 const FormPage = (props) => {
     

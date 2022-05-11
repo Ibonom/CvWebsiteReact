@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import clasess from "./SecondPage.module.css";
+import clasess from "./SecondPage.module.scss";
 
 const SecondPage = (props) => {
     const clickHandler = () =>{

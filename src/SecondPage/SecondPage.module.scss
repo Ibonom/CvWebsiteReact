@@ -1,17 +1,20 @@
+@import '../index.scss';
+
+
 .position {
     margin-top: 15%;
     position: relative;
+    &:after {
+        content: '';
+        height: 80%;
+        top: 0;
+        position: fixed;
+        width: 100%;
+        background: linear-gradient(180deg, rgba(20, 20, 20, 1) 40%, rgba(20, 20, 20, 0) 100%);
+        z-index: 1;
+    }
 }
 
-.position::after {
-    content: '';
-    height: 80%;
-    top: 0;
-    position: fixed;
-    width: 100%;
-    background: linear-gradient(180deg, rgba(20, 20, 20, 1) 40%, rgba(20, 20, 20, 0) 100%);
-    z-index: 1;
-}
 
 
 .wrapper {
@@ -20,12 +23,11 @@
     margin: 0 auto;
     width: 60%;
     perspective: 1500px;
-
 }
 
 
 .scroll-text {
-    color: #FFC909;
+    color: $goldTxt;
     font-weight: bold;
     line-height: 3em;
     font-size: 5vw;
@@ -38,7 +40,7 @@
 
 .skipButton {
     border: none;
-    background-color: #FFC909;
+    background-color: $goldTxt;
     box-shadow: 0px 0px 2px 2px rgb(0, 0, 0);
     font-size: 25px;
     right: 0;
@@ -48,10 +50,9 @@
     z-index: 2;
     width: 120px;
     cursor: pointer;
-}
-
-.skipButton:active {
-    background-color: #c49901;
+    &:active{
+        background-color: #c49901;
+    }
 }
 
 
@@ -70,7 +71,7 @@
 
 @media screen and (max-width:767px) {
     .position {
-        margin-top: 70%;
+        margin-top: 90%;
     }
 
     .scroll-text {

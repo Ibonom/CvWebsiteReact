@@ -7,7 +7,7 @@ const SingleProject = (props) => {
   Try me
 </a>
   return (
-    <section className={classes}>
+    <section className={classes['previewImg']}>
       <nav>
         <p>{props.name}</p>
         <div>

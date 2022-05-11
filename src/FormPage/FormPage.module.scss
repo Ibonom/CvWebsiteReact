@@ -1,0 +1,89 @@
+@import '../index.scss';
+
+form {
+    height: 80vh;
+    flex-direction: column;
+    @include flexProperty(center,center);
+    
+    h4 {
+        font-size: 5vw;
+        color: white;
+        letter-spacing: 5px;
+        margin-bottom: 30px;
+    }
+    input {
+        background: transparent;
+        font-size: 2.5vw ;
+        opacity:60%;
+        outline: 0;
+        border-width: 0 0 2px;
+        border-color: white;
+        color: white;
+        
+        
+    }
+    textarea {
+        background: transparent;
+        opacity:60%;
+        font-size: 2.5vw ;
+        height: 50vh;
+        padding: 10px;
+        color: white;
+        border-width: 0 2px ;
+        border-color: white;
+        outline: 0;
+        resize: none;
+        margin: 25px;
+    }
+    .sendButton {
+        border: none;
+        background-color: transparent;
+        font-size: 3rem;
+        color:white;
+        cursor: pointer;
+    }
+}
+.prevButton {
+    border: none;
+    background-color: $goldTxt;
+    box-shadow: 0px 0px 2px 2px rgb(0,0,0);
+    font-size: 25px;
+    padding: 10px;
+    margin: 10px;
+    z-index: 2;
+    width: 120px;
+    cursor: pointer;
+}
+
+@media screen and (min-width:768px) and (max-width: 1023px) {
+    form {
+        input{
+            font-size: 3.5vw ;
+        }
+        textarea {
+            font-size: 3.5vw ;
+        }
+    } 
+}
+
+@media screen and (max-width:767px) {
+    form{
+        input{
+            font-size:5vw ;
+        }
+        textarea {
+            font-size: 5vw ;
+        }
+        .sendButton {
+            font-size: 2.5rem;
+        }
+        h4 {
+            margin-top:15px;
+            font-size:8vw;
+        }
+    } 
+    .prevButton {
+        font-size: 15px;
+        font-weight: bold;
+    }
+}

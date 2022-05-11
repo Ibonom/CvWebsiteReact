@@ -1,7 +1,7 @@
 import React from "react";
 import SingleProject from "./SingleProject/SingleProject";
 import ProjectData from "./ProjectData";
-import classes from "./ProjectPage.module.css";
+import classes from "./ProjectPage.module.scss";
 import ItemBackground from "../Background/ItemBackground";
 
 const ProjectPage = (props) => {
