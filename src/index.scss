@@ -1,28 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
-
-$primaryLightGreen: #5FEBBA;
+$primaryLightGreen: #5febba;
 $primaryDarkerGreen: #357065;
-$goldTxt: #FFC909;
+$goldTxt: #ffc909;
 
-@mixin flexProperty($row:"",$column:""){
-    display:flex;
-    @if $row != '' {
-        justify-content: $row;
-    }
-    @if $row != ''{
-        align-items: $column;
-    }
+@mixin flexProperty($row: "", $column: "") {
+  display: flex;
+  justify-content: $row;
+  align-items: $column;
 }
 
-
-
 @font-face {
-    font-family: PIXEL;
-    src: local('PIXEL'), url(./Assets/Fonts/PIXEL.ttf) format('truetype');
+  font-family: PIXEL;
+  src: local("PIXEL"), url(./Assets/Fonts/PIXEL.ttf) format("truetype");
 }
 
 body {
-    font-family:  Bebas Neue , sans-serif;
-    
+  font-family: Bebas Neue, sans-serif;
 }

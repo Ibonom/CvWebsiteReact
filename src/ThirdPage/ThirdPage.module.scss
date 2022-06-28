@@ -1,33 +1,61 @@
 @import "../index.scss";
 @import "../Background/Background.module.scss";
+@import "../Assets/scss/utility/mixins.scss";
 
-
-.positionFlex {
-  @include flexProperty(space-around);
+.skillSection {
+  width: 100%;
+  min-width: 80vw;
+  height: max-content;
+  @include flexProperty(center, center);
+  flex-direction: column;
   padding: 15px;
+  &__mainWrapper {
+    @include flexProperty(space-between);
+    width: 90%;
+    max-width: 1000px;
+    @include for-phone-only {
+      @include flexProperty(space-between,center);
+      flex-direction: column;
+    }
+  }
+  &__name{
+    margin-bottom: 25px;
+    color: $primaryLightGreen;
+    font-size: 2em;
+    font-family: PIXEL;
+    letter-spacing: 11px;
+    width: max-content;
+  }
 }
 
-.profilePicture {
+.profileWrapper {
   @include flexProperty(center, center);
-  flex: 30%;
   flex-direction: column;
-
-  img {
+  padding: 25px;
+  margin-right: 10px;
+  @include for-phone-only {
+    padding: 0;
+    margin: 0;
+  }
+  &__img {
     border: $primaryLightGreen 3px solid;
     border-radius: 5px;
-    height: 50%;
+    height: 80%;
     opacity: 70%;
     width: 100%;
     max-width: 250px;
-    max-height: 350px;
     padding: 0;
     object-fit: cover;
+    @include for-phone-only {
+      height: 50%;
+      width: 50%;
+    }
   }
-  p {
+  &__lvl {
     font-family: PIXEL;
     color: $primaryLightGreen;
     padding: 15px;
-    font-size: 5vw;
+    font-size: 2em;
   }
 }
 
@@ -40,28 +68,8 @@
       @include flexProperty(center, center);
     }
   }
-  h2 {
-    margin-left: 3px;
-    color: $primaryLightGreen;
-    font-size: 6vw;
-    font-family: PIXEL;
-    letter-spacing: 11px;
-    width: max-content;
-  }
 }
-.binary {
-  font-family: PIXEL;
-  flex: 15%;
-  @include flexProperty($column: center);
-  p {
-    color: white;
-    height: max-content;
-    text-align: center;
-    opacity: 50%;
-    overflow-wrap: break-word;
-    width: 200px;
-  }
-}
+
 
 .nextSection {
   @include flexProperty(center);
@@ -73,7 +81,7 @@
     color: $goldTxt;
     letter-spacing: 3px;
     padding: 10px;
-    margin:8px;
+    margin: 8px;
     cursor: pointer;
   }
 }
@@ -104,22 +112,9 @@
       font-size: 1.5em;
     }
   }
-  .binary {
-    p {
-      font-size: 1em;
-    }
-  }
 }
 
 @media screen and (max-width: 767px) {
-  .profilePicture {
-    img {
-      opacity: 70%;
-      margin-top: 25%;
-      width: 120px;
-    }
-  }
-
   .backgroundStyle {
     margin: 0.5rem;
     padding: 0.5rem;
@@ -133,7 +128,7 @@
     width: 70%;
   }
   .list {
-      width: 80%;
+    width: 80%;
     h2 {
       height: max-content;
       letter-spacing: 4px;

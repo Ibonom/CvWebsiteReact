@@ -1,0 +1,59 @@
+@import "../../Assets/SCSS/utility/Variables.scss";
+@import "../../Assets/SCSS/utility/mixins.scss";
+@import "../../Assets//SCSS/Components/Button.module.scss";
+
+.Button {
+  &--modifyByLink {
+    @extend .Button;
+    text-decoration: none;
+    margin: 5px;
+  }
+}
+
+.singleProject {
+  padding: 15px;
+  &__tittle {
+    color: $primaryLightGreen;
+    font-family: PIXEL;
+    font-size: 3rem;
+    text-align: center;
+    padding: 25px;
+    @include for-phone-only{
+        font-size: 2em;
+    }
+  }
+  &__img {
+    padding: 10px;
+    height: 15%;
+    width: 15%;
+    object-fit: contain;
+    opacity: 60%;
+    @include for-phone-only {
+      width: 45%;
+    }
+  }
+  &__links {
+    @include flexProperty(flex-end)
+  }
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  @include for-phone-only{
+    flex-direction: column;
+  }
+  &__description {
+    font-family: PIXEL;
+    color: white;
+    opacity: 60%;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 15px;
+    overflow-wrap: break-word;
+    @include for-phone-only{
+        font-size: 0.9rem;
+        width: 100%;
+    }
+  }
+}

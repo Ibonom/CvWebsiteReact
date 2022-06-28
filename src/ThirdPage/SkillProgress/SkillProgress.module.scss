@@ -1,20 +1,34 @@
 @import '../../index.scss';
+@import "../../Assets/scss/utility/mixins.scss";
 
 
-.icons{
-    height: 125px;
+.progressWrapper{
     width:  100%;
     padding: 5px;
     opacity: 80%;
-    display:grid ;
-    grid-template-columns: 1fr 3fr;
-    align-items: center;
-}
+    @include flexProperty(space-between,center);
 
-.bar{
-    width: 100%;
-    height: 50%;
-    background-color: #272626;
+    @include for-tablet-landscape-up{
+        height: 125px;
+    }
+    @include for-tablet-portrait-up{
+        height: 90px;
+    }
+    @include for-phone-only{
+        height: 95px;
+    }
+    &__img{
+        height: 85%;
+        padding: 5px;
+        @include for-phone-only{
+            height:65%;
+        }
+    }
+    &__bar{
+        width: 100%;
+        height: 40%;
+        background-color: #272626;
+    }
 }
 
 .progress {

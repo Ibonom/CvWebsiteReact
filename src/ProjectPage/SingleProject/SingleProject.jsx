@@ -1,26 +1,37 @@
 import React from "react";
-import classes from "./SingleProject.module.css";
+import classes from "./SingleProject.module.scss";
 
 
-const SingleProject = (props) => {
-  const link = <a href={props.link} target="_blank" rel="noreferrer">
-  Try me
-</a>
+const SingleProject = ({name,githubLink,link,img,describe}) => {
+  const onlineLink = (
+    <a
+      className={classes["Button--modifyByLink"]}
+      href={link}
+      target="_blank"
+      rel="noreferrer"
+    >
+      Try me
+    </a>
+  );
   return (
-    <section className={classes['previewImg']}>
+    <section className={classes.singleProject}>
       <nav>
-        <p>{props.name}</p>
-        <div>
-          <a href={props.githubLink} target="_blank" rel="noreferrer">
+        <p className={classes.singleProject__tittle}>{name}</p>
+        <div className={classes.singleProject__links}>
+          <a 
+            className={classes["Button--modifyByLink"]}
+            href={githubLink}
+            target="_blank"
+            rel="noreferrer"
+          >
             Github
           </a>
-          {props.link.length > 0 ? link : <React.Fragment/> }
-          
+          {link.length > 0 && onlineLink}
         </div>
       </nav>
-      <article>
-        <img src={props.img} alt="project" />
-        <p>{props.describe}</p>
+      <article className={classes.content}>
+        <img src={img} alt="project" className={classes.singleProject__img}/>
+        <p className={classes.content__description}>{describe}</p>
       </article>
     </section>
   );
