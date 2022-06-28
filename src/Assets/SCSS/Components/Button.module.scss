@@ -15,7 +15,7 @@
     font-size: 1.3em;
   }
   @include for-phone-only {
-    font-size: 1em;
+    font-size: 0.8em;
   }
   &:hover {
     background-color: $goldTxt;

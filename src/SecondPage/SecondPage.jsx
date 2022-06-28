@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import clasess from "./SecondPage.module.scss";
+import components from "../Assets/SCSS/Components/Button.module.scss"
 
 const SecondPage = (props) => {
     const clickHandler = () =>{
@@ -12,10 +13,10 @@ const SecondPage = (props) => {
 
   return (
     <React.Fragment>
-        <button type="button" className={clasess['skipButton']} onClick={clickHandler}>{name}</button>
-      <div className={clasess["position"]}>
+        <button type="button" className={clasess["Button--skipNav"]} onClick={clickHandler}>{name}</button>
+      <section className={clasess["position"]}>
         <div className={clasess["wrapper"]}>
-          <div className={clasess["scroll-text"]}>
+          <article className={clasess["scroll-text"]}>
             <p>
               My name is Dawid Gucwa. For as long as I can remember, the digital
               world has been a big part of my life. My virtual adventure began
@@ -26,9 +27,9 @@ const SecondPage = (props) => {
               working in telemarketing sales, which offers digital services, to
               creating press images in a media analytics company.
             </p>
-          </div>
+          </article>
         </div>
-      </div>
+      </section>
     </React.Fragment>
   );
 };

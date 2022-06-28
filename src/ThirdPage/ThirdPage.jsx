@@ -4,7 +4,6 @@ import face from "../Assets/me.jpg";
 import SkillProgress from "./SkillProgress/SkillProgress";
 import Icons from "./Icons";
 import ItemBackground from "../Background/ItemBackground";
-import components from '../Assets/SCSS/Components/Button.module.scss'
 
 const ThirdPage = (props) => {
   const clickHandler = () => {
@@ -15,12 +14,12 @@ const ThirdPage = (props) => {
     <ItemBackground>
       <section className={classes.skillSection}>
         <h2 className={classes.skillSection__name}>Dawid Gucwa</h2>
-        <div className={classes.skillSection__mainWrapper}>
+        <section className={classes.skillSection__mainWrapper}>
           <div className={classes.profileWrapper}>
             <img src={face} alt="me" className={classes.profileWrapper__img}/>
             <p className={classes.profileWrapper__lvl}>26Lvl</p>
           </div>
-          <div className={classes["list"]}>
+          <section className={classes.list}>
             <ul>
               {Icons.map((object) => (
                 <li key={object.name}>
@@ -28,11 +27,11 @@ const ThirdPage = (props) => {
                 </li>
               ))}
             </ul>
-          </div>
-        </div>
-        <div >
-          <button className={components.Button} onClick={clickHandler}>More information about me</button>
-        </div>
+          </section>
+        </section>
+        <nav >
+          <button className={classes['Button--moreInfo']} onClick={clickHandler}>More information about me</button>
+        </nav>
       </section>
     </ItemBackground>
   );

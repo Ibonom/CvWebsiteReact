@@ -18,42 +18,50 @@
     font-size: 3rem;
     text-align: center;
     padding: 25px;
-    @include for-phone-only{
-        font-size: 2em;
+    @include for-phone-only {
+      font-size: 1.5em;
     }
   }
   &__img {
     padding: 10px;
-    height: 15%;
-    width: 15%;
-    object-fit: contain;
-    opacity: 60%;
+    height: 25%;
+
+    object-fit: scale-down;
+    @include for-tablet-landscape-up {
+      width: 15%;
+    }
+    @include for-tablet-portrait-up {
+      width: 30%;
+    }
     @include for-phone-only {
-      width: 45%;
+      width: 50%;
     }
   }
-  &__links {
-    @include flexProperty(flex-end)
+  &__links {    
+    @include flexProperty(flex-end);
+    @include for-phone-only{
+        @include flexProperty(center);
+    }
   }
 }
 
 .content {
   display: flex;
   align-items: center;
-  @include for-phone-only{
+  
+  @include for-phone-only {
     flex-direction: column;
   }
   &__description {
     font-family: PIXEL;
     color: white;
-    opacity: 60%;
     text-align: center;
     font-size: 1.2rem;
     padding: 15px;
     overflow-wrap: break-word;
-    @include for-phone-only{
-        font-size: 0.9rem;
-        width: 100%;
+    @include for-phone-only {
+      font-size: 0.8rem;
+      width: 100%;
     }
   }
 }

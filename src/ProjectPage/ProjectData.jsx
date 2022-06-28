@@ -16,7 +16,7 @@ const ProjectData = [
   },
   {
     id: "01",
-    name: "PhotographyBlog",
+    name: "Photography Blog",
     githubLink: "https://github.com/Ibonom/PhotographyBlog",
     link: "https://photographyblogtemplate.netlify.app/#header",
     img: photographyBlog,

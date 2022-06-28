@@ -35,29 +35,3 @@
     height: 100%;
     background-color: $primaryLightGreen;
 }
-
-@media screen and (min-width:768px) and (max-width: 1023px) {
-    .icons{
-        height: 50px;
-        width:80%;
-        margin-bottom:25px;
-    }
-    .icons img{
-        height: 60px;
-    }
-}
-
-@media screen and (max-width:767px){
-    .icons{
-        height: 100px;
-        width:100%;
-        @include flexProperty(center,center);
-        img {
-            height:50px;
-        }
-    }
-    .bar{
-        width: 100%;
-    }
-
-}

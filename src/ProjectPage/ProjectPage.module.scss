@@ -1,47 +1,37 @@
-@import '../index.scss';
+@import "../index.scss";
+@import "../Assets//SCSS/Components/Button.module.scss";
 
 .gallery {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 15px;
-    list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px;
+  list-style-type: none;
 }
 
+.Button {
+  &--navModif {
+    @extend .Button;
+    border-radius: 0 0 5px 5px;
+    border-width: 0 1px 3px 1px;
+    border-color: $primaryDarkerGreen;
+    border-style: solid;
+    @include for-tablet-landscape-up {
+      font-size: 1em;
+    }
+  }
+}
 
 .navButtons {
-    font-size: 2rem;
-    text-align: center;
-    button {
-        width: 25vw;
-        cursor: pointer;
-        background-color: $primaryDarkerGreen;
-        color:$goldTxt;
-        border-width:0 1px 3px 1px ;
-        border-style: solid ;
-        border-color: $primaryLightGreen;
-        border-radius: 0 0 5px 5px;
-        padding: 10px;
-        font-size: 1.7rem;
-    }
-}
-
-
-
-@media screen and (min-width:768px) and (max-width: 1023px) {
-    .navButtons {
-        button {
-            font-size: 1.5rem;
-        }
-    }
-}
-
-@media screen and (max-width:767px){
-    .navButtons {
-        button {
-            font-size: 1.2rem;
-            text-align: center;
-            width: 45vw;
-        }
-    }
+  margin-top: -5px;
+  text-align: center;
+  @include for-phone-only {
+    font-size: 1.5em;
+  }
+  @include for-tablet-portrait-up {
+    font-size: 1.3em;
+  }
+  @include for-tablet-landscape-up {
+    font-size: 1.7em;
+  }
 }

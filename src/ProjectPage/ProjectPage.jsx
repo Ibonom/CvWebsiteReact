@@ -4,22 +4,26 @@ import ProjectData from "./ProjectData";
 import classes from "./ProjectPage.module.scss";
 import ItemBackground from "../Background/ItemBackground";
 
-const ProjectPage = (props) => {
+const ProjectPage = ({ toThird, toForm }) => {
   const clickHandler = () => {
-    props.toThird();
+    toThird();
   };
 
   const toFormHandler = () => {
-    props.toForm();
+    toForm();
   };
 
   return (
     <React.Fragment>
-      <nav className={classes["navButtons"]}>
-        <button onClick={clickHandler}>Back to profile</button>
-        <button onClick={toFormHandler}>Contact with me</button>
+      <nav className={classes.navButtons}>
+        <button className={classes["Button--navModif"]} onClick={clickHandler}>
+          Back to profile
+        </button>
+        <button className={classes["Button--navModif"]} onClick={toFormHandler}>
+          Contact with me
+        </button>
       </nav>
-      <ul className={classes["gallery"]}>
+      <ul className={classes.gallery}>
         {ProjectData.map((object) => (
           <ItemBackground>
             <li key={object.id}>

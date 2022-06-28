@@ -1,80 +1,72 @@
-@import '../index.scss';
-
+@import "../index.scss";
+@import "../Assets/SCSS/Components/Button.module.scss";
 
 .position {
-    margin-top: 15%;
-    position: relative;
-    &:after {
-        content: '';
-        height: 80%;
-        top: 0;
-        position: fixed;
-        width: 100%;
-        background: linear-gradient(180deg, rgba(20, 20, 20, 1) 40%, rgba(20, 20, 20, 0) 100%);
-        z-index: 1;
-    }
+  margin-top: 15%;
+  position: relative;
+  &:after {
+    content: "";
+    height: 80%;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    background: linear-gradient(
+      180deg,
+      rgba(20, 20, 20, 1) 40%,
+      rgba(20, 20, 20, 0) 100%
+    );
+    z-index: 1;
+  }
 }
-
-
 
 .wrapper {
-    display: flex;
-    height: 100%;
-    margin: 0 auto;
-    width: 60%;
-    perspective: 1500px;
+  display: flex;
+  height: 100%;
+  margin: 0 auto;
+  width: 60%;
+  perspective: 1500px;
 }
-
 
 .scroll-text {
-    color: $goldTxt;
-    font-weight: bold;
-    line-height: 3em;
-    font-size: 5vw;
-    text-align: justify;
-    position: relative;
-    animation: scroll 45s linear forwards;
-    transform: translateZ(-2500px) rotateX(20deg);
+  color: $goldTxt;
+  font-weight: bold;
+  line-height: 3em;
+  font-size: 5vw;
+  text-align: justify;
+  position: relative;
+  animation: scroll 45s linear forwards;
+  transform: translateZ(-2500px) rotateX(20deg);
 }
 
-
-.skipButton {
-    border: none;
-    background-color: $goldTxt;
-    box-shadow: 0px 0px 2px 2px rgb(0, 0, 0);
-    font-size: 25px;
-    right: 0;
-    padding: 10px;
+.Button {
+  &--skipNav {
+    font-size: 1.5em;
     margin: 10px;
+    @extend .Button;
     position: fixed;
+    right: 0;
     z-index: 2;
-    width: 120px;
-    cursor: pointer;
-    &:active{
-        background-color: #c49901;
-    }
+  }
 }
-
 
 @keyframes scroll {
-    from {
-        top: 0;
-        transform: translateZ(0) rotateX(21deg)
-    }
+  from {
+    top: 0;
+    transform: translateZ(0) rotateX(21deg);
+  }
 
-    to {
-        top: -7500px;
-        transform: translateZ(-2500px) rotateX(21deg)
-    }
+  to {
+    top: -7500px;
+    transform: translateZ(-2500px) rotateX(21deg);
+  }
 }
 
+@media screen and (max-width: 767px) {
+  .position {
+    margin-top: 90%;
+  }
 
-@media screen and (max-width:767px) {
-    .position {
-        margin-top: 90%;
-    }
-
-    .scroll-text {
-        animation: scroll 120s linear forwards;
-    }
+  .scroll-text {
+    animation: scroll 120s linear forwards;
+  }
 }
